@@ -13,7 +13,7 @@ public class GerenciadorDeProdutos
     void ExibirOpcoesDoMenu()
     {
         Console.Clear();
-        Console.WriteLine("Escolha entre uma das seguintes opções abaixo:\n");
+        Console.WriteLine("\nEscolha entre uma das seguintes opções abaixo:\n");
         Console.WriteLine("Digite 1 para Criar Produto");
         Console.WriteLine("Digite 2 para listar Produtos");
         Console.WriteLine("Digite 3 para sair");
@@ -22,7 +22,7 @@ public class GerenciadorDeProdutos
     void CriaProduto()
     {
         Console.Clear();
-        Console.WriteLine("\n Por favor, Informe os dados do produto a seguir:");
+        Console.WriteLine("Por favor, Informe os dados do produto a seguir:\n");
 
         Console.Write("Nome: ");
         Produto produto = new Produto(Console.ReadLine());
@@ -40,7 +40,7 @@ public class GerenciadorDeProdutos
     void ListaProdutos()
     {
         Console.Clear();
-        Console.WriteLine("Veja a seguir a lista de produtos:");
+        Console.WriteLine("Veja a seguir a lista de produtos:\n");
         foreach (var produto in produtos)
         {
             produto.ExibirInformacoes();  
@@ -54,6 +54,8 @@ public class GerenciadorDeProdutos
         while(executar)
         {
             ExibirOpcoesDoMenu();
+
+            Console.Write("Opção: ");
             int opcaoEscolhidaNumerica = int.Parse( Console.ReadLine() );
             switch (opcaoEscolhidaNumerica)
             {
