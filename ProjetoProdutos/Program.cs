@@ -1,5 +1,9 @@
-﻿Console.WriteLine("Bem Vindo ao Projeto Produto!\n");
+﻿GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();
+gerenciadorDeProdutos.ExecutaMenu();
 
+Console.WriteLine("*************************************************\n");
+
+Console.WriteLine("Você é Bem Vindo ao Projeto Produto! Volte sempre!\n");
 
 
 Produto produto1 = new Produto("manga");
@@ -49,8 +53,3 @@ cliente1.Endereco.Número = 2540;
 cliente1.ExibirInformacoes();
 
 
-Console.WriteLine("*************************************************\n");
-
-
-GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();
-gerenciadorDeProdutos.ExecutaMenu();
