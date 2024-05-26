@@ -2,11 +2,11 @@
 
 public class Cliente
 {
-    public string Nome;
-    public string CPF;
-    public string Email;
-    public string Profissao;
-    public string Telefone;
+    public string Nome { get; set; }
+    public string CPF { get; set; }
+    public string Email { get; set; }
+    public string Profissao { get; set; }
+    public string Telefone { get; set; }
     public Endereco Endereco = new Endereco();
 
     public void ExibirInformacoes()

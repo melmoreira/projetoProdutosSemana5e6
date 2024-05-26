@@ -1,10 +1,10 @@
 ﻿// Primeira classe Produto
 public class Produto
 {
-    public string Nome;
-    public string Descricao;
-    public double PrecoUnitario;
-    public int Quantidade;
+    public string Nome { get; set; }
+    public string Descricao { get; set; }
+    public double PrecoUnitario { get; set; }
+    public int Quantidade { get; set; }
 
     //construtor
     public Produto (string Nome)
