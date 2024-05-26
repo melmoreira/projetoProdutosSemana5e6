@@ -6,15 +6,19 @@ Console.WriteLine("*************************************************\n");
 Console.WriteLine("Você é Bem Vindo ao Projeto Produto! Volte sempre!\n");
 
 
-Produto produto1 = new Produto("manga");
-produto1.Descricao = "verde";
-produto1.PrecoUnitario = 2.50;
-produto1.Quantidade = 8;
+Produto produto1 = new Produto("manga")
+{
+    Descricao = "verde",
+    PrecoUnitario = 2.50,
+    Quantidade = 8,
+};
 
-Produto produto2 = new Produto("uva");
-produto2.Descricao = "rubi";
-produto2.PrecoUnitario = 10;
-produto2.Quantidade = 20;
+Produto produto2 = new Produto("uva")
+{ 
+    Descricao = "rubi",
+    PrecoUnitario = 10,
+    Quantidade = 20,
+};
 
 
 produto1.ExibirInformacoes();
@@ -23,13 +27,15 @@ produto2.ExibirInformacoes();
 
 Console.WriteLine("*************************************************\n");
 
-Endereco endereco1 = new Endereco();
-endereco1.Bairro = "Mooca";
-endereco1.Cidade = "São Paulo";
-endereco1.Complemento = "Casa";
-endereco1.Estado = "SP";
-endereco1.Rua = "Amador Bueno";
-endereco1.Número = 687;
+Endereco endereco1 = new Endereco()
+{
+    Bairro = "Mooca",
+    Cidade = "São Paulo",
+    Complemento = "Casa",
+    Estado = "SP",
+    Rua = "Amador Bueno",
+    Número = 687,
+};
 
 
 endereco1.ExibirInformacoes();
