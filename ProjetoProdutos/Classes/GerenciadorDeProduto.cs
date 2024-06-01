@@ -87,12 +87,17 @@ public class GerenciadorDeProdutos
 
     async Task PesquisaProdutoAsync()
     {
-        Console.WriteLine("pesquisando produto...");
-
-        using (HttpClient client = new HttpClient())
+        try
         {
-            string resposta = await client.GetStringAsync("https://fakestoreapi.com/products");
-            Console.WriteLine(resposta);
+            Console.WriteLine("pesquisando produtos...");
+
+            using (HttpClient client = new HttpClient())
+            {
+                string resposta = await client.GetStringAsync("https://fakestoreapi.com/products");
+                Console.WriteLine(resposta);
+            }
+        } catch {
+            Console.WriteLine("erro ao pesqusiar produtos...");
         }
 
 
