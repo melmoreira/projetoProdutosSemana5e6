@@ -1,8 +1,10 @@
 ﻿namespace Classes.Modelos;
 
+using Classes.Interfaces;
+
 // Classe Cliente
 
-public class Cliente
+public class Cliente: Identificavel
 {
     public string Nome { get; set; }
     public string CPF { get; set; }
@@ -19,5 +21,10 @@ public class Cliente
         Console.WriteLine($"Profissao: {Profissao}");
         Console.WriteLine($"Telefone: {Telefone}");
         Endereco.ExibirInformacoes();
+    }
+
+    string Identificavel.Identificar()
+    {
+        return Nome + CPF;
     }
 }

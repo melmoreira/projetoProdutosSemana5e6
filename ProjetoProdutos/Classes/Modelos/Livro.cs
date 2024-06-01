@@ -1,7 +1,9 @@
-﻿namespace Classes.Modelos;
+﻿using Classes.Interfaces;
+
+namespace Classes.Modelos;
 
 // Primeira classe Produto
-public class Livro : Produto
+public class Livro : Produto, Identificavel
 {
     string lsbn;
     int numeroDePaginas;
@@ -11,6 +13,11 @@ public class Livro : Produto
     {
         this.lsbn = lsbn;
         this.numeroDePaginas = numeroDePaginas;
+    }
+
+    string Identificavel.Identificar()
+    {
+        return Nome + lsbn;
     }
 }
 
