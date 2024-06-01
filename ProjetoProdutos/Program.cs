@@ -1,4 +1,8 @@
-﻿GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();
+﻿using Classes;
+using Classes.Modelos;
+
+
+GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();
 gerenciadorDeProdutos.ExecutaMenu();
 
 Console.WriteLine("*************************************************\n");
