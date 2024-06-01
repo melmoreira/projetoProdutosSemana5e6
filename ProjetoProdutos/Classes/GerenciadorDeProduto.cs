@@ -1,5 +1,7 @@
 ﻿namespace Classes;
 using Classes.Modelos;
+using System.Text.Json;
+using System;
 using System.Threading.Tasks;
 
 // Menu de Opções
@@ -56,12 +58,17 @@ public class GerenciadorDeProdutos
     public void ExecutaMenu()
     {
         bool executar = true;
-        while(executar)
+        while (executar)
         {
             ExibirOpcoesDoMenu();
 
             Console.Write("Opção: ");
-            int opcaoEscolhidaNumerica = int.Parse( Console.ReadLine() );
+            int opcaoEscolhidaNumerica;
+            try {
+                opcaoEscolhidaNumerica = int.Parse(Console.ReadLine());
+            } catch{
+                opcaoEscolhidaNumerica = -1;
+            }
             switch (opcaoEscolhidaNumerica)
             {
                 case 0:
@@ -94,14 +101,15 @@ public class GerenciadorDeProdutos
             using (HttpClient client = new HttpClient())
             {
                 string resposta = await client.GetStringAsync("https://fakestoreapi.com/products");
-                Console.WriteLine(resposta);
+                produtos = JsonSerializer.Deserialize<List<Produto>>(resposta);
+
+                ListaProdutos();
             }
         } catch {
             Console.WriteLine("erro ao pesqusiar produtos...");
+            EsperarInteracao();
         }
 
-
-        EsperarInteracao();
     }
 
     void EsperarInteracao()
