@@ -1,4 +1,6 @@
-﻿// Classe Cliente
+﻿namespace Classes.Modelos;
+
+// Classe Cliente
 
 public class Cliente
 {

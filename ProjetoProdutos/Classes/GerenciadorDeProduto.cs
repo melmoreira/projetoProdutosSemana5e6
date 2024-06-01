@@ -1,4 +1,7 @@
-﻿// Menu de Opções
+﻿namespace Classes;
+using Classes.Modelos;
+
+// Menu de Opções
 
 public class GerenciadorDeProdutos
 

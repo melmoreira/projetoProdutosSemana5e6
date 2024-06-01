@@ -1,4 +1,7 @@
-﻿// classe Endereco 
+﻿
+namespace Classes.Modelos;
+
+// classe Endereco 
 
 public class Endereco
 {

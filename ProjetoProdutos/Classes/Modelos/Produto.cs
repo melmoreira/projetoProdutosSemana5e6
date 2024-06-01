@@ -1,4 +1,6 @@
-﻿// Primeira classe Produto
+﻿namespace Classes.Modelos;
+
+// Primeira classe Produto
 public class Produto
 {
     public string Nome { get; set; }
