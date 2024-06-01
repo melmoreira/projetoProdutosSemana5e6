@@ -1,5 +1,6 @@
 ﻿namespace Classes;
 using Classes.Modelos;
+using System.Threading.Tasks;
 
 // Menu de Opções
 
@@ -17,6 +18,7 @@ public class GerenciadorDeProdutos
     {
         Console.Clear();
         Console.WriteLine("\nEscolha entre uma das seguintes opções abaixo:\n");
+        Console.WriteLine("Digite 0 para pesquisa externa");
         Console.WriteLine("Digite 1 para Criar Produto");
         Console.WriteLine("Digite 2 para listar Produtos");
         Console.WriteLine("Digite 3 para sair");
@@ -62,6 +64,9 @@ public class GerenciadorDeProdutos
             int opcaoEscolhidaNumerica = int.Parse( Console.ReadLine() );
             switch (opcaoEscolhidaNumerica)
             {
+                case 0:
+                    PesquisaProdutoAsync();
+                    break;
                 case 1:
                     CriaProduto();
                     break;
@@ -78,6 +83,20 @@ public class GerenciadorDeProdutos
             }
         }
 
+    }
+
+    async Task PesquisaProdutoAsync()
+    {
+        Console.WriteLine("pesquisando produto...");
+
+        using (HttpClient client = new HttpClient())
+        {
+            string resposta = await client.GetStringAsync("https://fakestoreapi.com/products");
+            Console.WriteLine(resposta);
+        }
+
+
+        EsperarInteracao();
     }
 
     void EsperarInteracao()
