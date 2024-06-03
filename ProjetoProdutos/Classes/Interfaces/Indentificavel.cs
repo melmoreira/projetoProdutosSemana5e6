@@ -1,4 +1,4 @@
-﻿namespace Classes.Interfaces;
+﻿namespace ProjetoProdutos.Classes.Interfaces;
 
 public interface Identificavel
 {

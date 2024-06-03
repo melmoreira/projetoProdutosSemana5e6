@@ -1,6 +1,6 @@
-﻿namespace Classes.Modelos;
+﻿namespace ProjetoProdutos.Classes.Modelos;
 
-using Classes.Interfaces;
+using ProjetoProdutos.Classes.Interfaces;
 
 // Classe Cliente
 

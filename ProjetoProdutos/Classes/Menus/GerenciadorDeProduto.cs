@@ -1,8 +1,8 @@
-﻿namespace Classes;
-using Classes.Modelos;
+﻿namespace ProjetoProdutos.Classes;
 using System.Text.Json;
 using System;
 using System.Threading.Tasks;
+using ProjetoProdutos.Classes.Modelos.Produtos;
 
 // Menu de Opções
 

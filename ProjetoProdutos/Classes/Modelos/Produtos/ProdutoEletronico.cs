@@ -1,4 +1,4 @@
-﻿namespace Classes.Modelos;
+﻿namespace ProjetoProdutos.Classes.Modelos.Produtos;
 
 // Primeira classe Produto
 public class ProdutoEletronico : Produto
@@ -10,7 +10,7 @@ public class ProdutoEletronico : Produto
     //construtor
     public ProdutoEletronico(string Nome, int potencia, int voltagem) : base(Nome)
     {
-        this.amperagem = potencia / voltagem;
+        amperagem = potencia / voltagem;
         this.voltagem = voltagem;
         this.potencia = potencia;
     }

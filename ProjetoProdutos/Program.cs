@@ -1,5 +1,6 @@
-﻿using Classes;
-using Classes.Modelos;
+﻿using ProjetoProdutos.Classes;
+using ProjetoProdutos.Classes.Modelos;
+using ProjetoProdutos.Classes.Modelos.Produtos;
 
 
 GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();

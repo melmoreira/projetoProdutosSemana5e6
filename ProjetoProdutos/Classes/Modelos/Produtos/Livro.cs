@@ -1,6 +1,6 @@
-﻿using Classes.Interfaces;
+﻿using ProjetoProdutos.Classes.Interfaces;
 
-namespace Classes.Modelos;
+namespace ProjetoProdutos.Classes.Modelos.Produtos;
 
 // Primeira classe Produto
 public class Livro : Produto, Identificavel

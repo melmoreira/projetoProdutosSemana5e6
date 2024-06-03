@@ -1,5 +1,5 @@
 ﻿
-namespace Classes.Modelos;
+namespace ProjetoProdutos.Classes.Modelos;
 
 // classe Endereco 
 

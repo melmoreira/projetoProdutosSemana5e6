@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Classes.Modelos;
+namespace ProjetoProdutos.Classes.Modelos.Produtos;
 
 // Primeira classe Produto
 
@@ -25,9 +25,9 @@ public class Produto
     public int Quantidade { get; set; } = 0;
 
     //construtor
-    public Produto (string Nome)
+    public Produto(string Nome)
     {
-        this.Nome=Nome;
+        this.Nome = Nome;
     }
 
     public void ExibirInformacoes()
