@@ -8,7 +8,7 @@ public class MenuBase
         Console.ReadLine();
     }
 
-    public int pegaOpacaoMenu()
+    public int pegaNumeroConsole()
     {
         Console.Write("Opção: ");
         try

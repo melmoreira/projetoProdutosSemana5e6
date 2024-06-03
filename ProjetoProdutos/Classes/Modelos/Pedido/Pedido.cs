@@ -27,14 +27,16 @@ public class Pedido
 
     public void ExibirInformacoes()
     {
-        cliente.ExibirInformacoes();
+       // cliente.ExibirInformacoes();
         foreach (var item in itemDePedidos)
         {
             item.ExibirInformacoes();
             Console.WriteLine("");
         }
-
+        Console.WriteLine("");
         Console.WriteLine($"Total: {total}");
+        Console.WriteLine($"Data: {data}");
+        Console.WriteLine("");
     }
 
 }

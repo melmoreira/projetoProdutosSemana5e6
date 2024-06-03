@@ -48,6 +48,7 @@ public class GerenciadorDeProdutos: MenuBase
     {
         Console.Clear();
         Console.WriteLine("Veja a seguir a lista de produtos:\n");
+
         foreach (var produto in produtos)
         {
             produto.ExibirInformacoes();
@@ -62,10 +63,10 @@ public class GerenciadorDeProdutos: MenuBase
         {
             ExibirOpcoesDoMenu();
 
-            switch (pegaOpacaoMenu())
+            switch (pegaNumeroConsole())
             {
                 case 0:
-                    PesquisaProdutoAsync();
+                    PesquisaProdutoAsync().Wait();
                     break;
                 case 1:
                     CriaProduto();
@@ -107,6 +108,19 @@ public class GerenciadorDeProdutos: MenuBase
 
     }
 
+    internal Produto verificaCodigoProduto(int codigoProduto)
+    {
+        if (codigoProduto > (produtos.Count - 1))
+        {
+            Console.WriteLine($"Produto {codigoProduto} não existe.");
+            return null;
+
+        }
+        else
+        {
+            return produtos[codigoProduto];
+        }
+    }
 }
 
 

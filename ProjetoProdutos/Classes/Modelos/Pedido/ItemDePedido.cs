@@ -14,9 +14,9 @@ public class ItemDePedido
 
     public void ExibirInformacoes()
     {
-        produto.ExibirInformacoes();
+        Console.WriteLine($"Nome Produto: {produto.Nome}");
         Console.WriteLine($"Quantidade: {quantidade}");
-        Console.WriteLine($"Subtotal:{subTotal}");
+        Console.WriteLine($"Subtotal Item:{subTotal}");
     }
 }
 

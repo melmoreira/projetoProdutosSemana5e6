@@ -22,12 +22,13 @@ public class MenuPrincipal: MenuBase
         {
             ExibirOpcoesDoMenu();
 
-            switch (pegaOpacaoMenu())
+            switch (pegaNumeroConsole())
             {
                 case 1:
                     gerenciadorDeProdutos.Executa();
                     break;
                 case 2:
+                    gerenciadorDePedidos.gerenciadorDeProdutos = gerenciadorDeProdutos;
                     gerenciadorDePedidos.Executa();
                     break;
                 case 3:
