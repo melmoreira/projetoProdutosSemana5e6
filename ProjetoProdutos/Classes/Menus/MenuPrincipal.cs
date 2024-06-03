@@ -17,11 +17,13 @@ public class MenuPrincipal: MenuBase
 
     public void Executa()
     {
+        gerenciadorDeProdutos.PesquisaProdutoAsync().Wait();
         bool executar = true;
         while (executar)
         {
             ExibirOpcoesDoMenu();
 
+            Console.Write("Opção: ");
             switch (pegaNumeroConsole())
             {
                 case 1:

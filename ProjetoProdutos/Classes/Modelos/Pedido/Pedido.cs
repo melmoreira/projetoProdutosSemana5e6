@@ -27,7 +27,11 @@ public class Pedido
 
     public void ExibirInformacoes()
     {
-       // cliente.ExibirInformacoes();
+        // cliente.ExibirInformacoes();
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"Resumo do Pedido {data}\n");
+        Console.ForegroundColor = ConsoleColor.White;
+
         foreach (var item in itemDePedidos)
         {
             item.ExibirInformacoes();
@@ -35,7 +39,6 @@ public class Pedido
         }
         Console.WriteLine("");
         Console.WriteLine($"Total: {total}");
-        Console.WriteLine($"Data: {data}");
         Console.WriteLine("");
     }
 

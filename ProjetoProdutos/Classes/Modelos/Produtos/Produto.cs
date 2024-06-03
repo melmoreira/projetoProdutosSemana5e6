@@ -35,7 +35,13 @@ public class Produto
         Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Descrição: {Descricao}");
         Console.WriteLine($"Preço Unitário: {PrecoUnitario:C}");
-        Console.WriteLine($"Quantidade: {Quantidade}\n");
+        Console.WriteLine($"Quantidade em estoque: {Quantidade}\n");
+    }
+
+    public void ExibirInformacoesReduzidas()
+    {
+        Console.WriteLine($"Nome: {Nome}");
+        Console.WriteLine($"Preço Unitário: {PrecoUnitario:C}");
     }
 }
 

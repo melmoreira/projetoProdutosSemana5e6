@@ -63,6 +63,7 @@ public class GerenciadorDeProdutos: MenuBase
         {
             ExibirOpcoesDoMenu();
 
+            Console.Write("Opção: ");
             switch (pegaNumeroConsole())
             {
                 case 0:
@@ -86,7 +87,7 @@ public class GerenciadorDeProdutos: MenuBase
 
     }
 
-    async Task PesquisaProdutoAsync()
+    public async Task PesquisaProdutoAsync()
     {
         try
         {

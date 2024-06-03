@@ -14,6 +14,7 @@ public class GerenciadorDePedidos: MenuBase
         Console.Clear();
         Console.WriteLine("\nEscolha entre uma das seguintes opções abaixo:\n");
         Console.WriteLine("Digite 1 para Criar Pedido");
+        Console.WriteLine("Digite 2 para Listar Pedidos");
         Console.WriteLine("Digite 3 para menu anterior");
     }
 
@@ -24,19 +25,24 @@ public class GerenciadorDePedidos: MenuBase
         {
             ExibirOpcoesDoMenu();
 
+            Console.Write("Opção: ");
             switch (pegaNumeroConsole())
             {
                 case 1:
                     CriarPedido();
+                    break;
+                case 2:
+                    foreach(var pedido in pedidos)
+                        pedido.ExibirInformacoes();
                     break;
                 case 3:
                     executar = false;
                     break;
                 default:
                     Console.WriteLine("Você escolheu uma opção invalida.");
-                    EsperarInteracao();
                     break;
             }
+            EsperarInteracao();
         }
 
     }
@@ -77,11 +83,6 @@ public class GerenciadorDePedidos: MenuBase
             EsperarInteracao();
         }
         Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("Resumo do Pedido\n");
-        Console.ForegroundColor = ConsoleColor.White;
-
-
         pedido.ExibirInformacoes();
         Console.WriteLine("\n\nPedido finalizado e adicionado a lista");
         EsperarInteracao();

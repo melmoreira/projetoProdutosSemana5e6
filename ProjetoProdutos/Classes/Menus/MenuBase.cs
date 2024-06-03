@@ -10,7 +10,6 @@ public class MenuBase
 
     public int pegaNumeroConsole()
     {
-        Console.Write("Opção: ");
         try
         {
             return int.Parse(Console.ReadLine());
