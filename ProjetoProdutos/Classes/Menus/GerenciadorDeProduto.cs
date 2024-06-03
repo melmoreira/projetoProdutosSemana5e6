@@ -1,4 +1,4 @@
-﻿namespace ProjetoProdutos.Classes;
+﻿namespace ProjetoProdutos.Classes.Menus;
 using System.Text.Json;
 using System;
 using System.Threading.Tasks;
@@ -6,15 +6,15 @@ using ProjetoProdutos.Classes.Modelos.Produtos;
 
 // Menu de Opções
 
-public class GerenciadorDeProdutos
+public class GerenciadorDeProdutos: MenuBase
 
 {
 
-    List<Produto> produtos = new List<Produto>();
+    public List<Produto> produtos = new List<Produto>();
 
-	public GerenciadorDeProdutos()
-	{
-	}
+    public GerenciadorDeProdutos()
+    {
+    }
 
     void ExibirOpcoesDoMenu()
     {
@@ -23,7 +23,7 @@ public class GerenciadorDeProdutos
         Console.WriteLine("Digite 0 para pesquisa externa");
         Console.WriteLine("Digite 1 para Criar Produto");
         Console.WriteLine("Digite 2 para listar Produtos");
-        Console.WriteLine("Digite 3 para sair");
+        Console.WriteLine("Digite 3 para menu anterior");
     }
 
     void CriaProduto()
@@ -50,26 +50,19 @@ public class GerenciadorDeProdutos
         Console.WriteLine("Veja a seguir a lista de produtos:\n");
         foreach (var produto in produtos)
         {
-            produto.ExibirInformacoes();  
+            produto.ExibirInformacoes();
         }
         EsperarInteracao();
     }
 
-    public void ExecutaMenu()
+    public void Executa()
     {
         bool executar = true;
         while (executar)
         {
             ExibirOpcoesDoMenu();
 
-            Console.Write("Opção: ");
-            int opcaoEscolhidaNumerica;
-            try {
-                opcaoEscolhidaNumerica = int.Parse(Console.ReadLine());
-            } catch{
-                opcaoEscolhidaNumerica = -1;
-            }
-            switch (opcaoEscolhidaNumerica)
+            switch (pegaOpacaoMenu())
             {
                 case 0:
                     PesquisaProdutoAsync();
@@ -105,17 +98,13 @@ public class GerenciadorDeProdutos
 
                 ListaProdutos();
             }
-        } catch {
+        }
+        catch
+        {
             Console.WriteLine("erro ao pesqusiar produtos...");
             EsperarInteracao();
         }
 
-    }
-
-    void EsperarInteracao()
-    {
-        Console.WriteLine("pressione enter para continuar...");
-        Console.ReadLine();
     }
 
 }

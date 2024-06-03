@@ -1,10 +1,10 @@
-﻿using ProjetoProdutos.Classes;
+﻿using ProjetoProdutos.Classes.Menus;
 using ProjetoProdutos.Classes.Modelos;
 using ProjetoProdutos.Classes.Modelos.Produtos;
 
 
-GerenciadorDeProdutos gerenciadorDeProdutos = new GerenciadorDeProdutos();
-gerenciadorDeProdutos.ExecutaMenu();
+MenuPrincipal menu = new MenuPrincipal();
+menu.Executa();
 
 Console.WriteLine("*************************************************\n");
 

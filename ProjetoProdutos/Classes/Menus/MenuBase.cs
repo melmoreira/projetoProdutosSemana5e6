@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ProjetoProdutos.Classes.Menus;
 
-namespace ProjetoProdutos.Classes.Menus;
 public class MenuBase
 {
     public void EsperarInteracao()
@@ -15,6 +10,7 @@ public class MenuBase
 
     public int pegaOpacaoMenu()
     {
+        Console.Write("Opção: ");
         try
         {
             return int.Parse(Console.ReadLine());
